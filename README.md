@@ -8,8 +8,9 @@
 ```
 1. Open Hybrid-Encryption folder in a suitable editor(preferably VS Code)
 2. Open a new terminal in VS Code 
-3. cd backend
-4. npm i
-5. node index.js
-6. Open home.html in the browser and began by registering a user
+3. Type the following commands -
+  3.1 cd backend
+  3.2 npm i
+  3.3 node index.js
+4. Open home.html in the browser and began by registering a user
 ```
