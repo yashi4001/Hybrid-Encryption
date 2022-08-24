@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Create User</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <form class="registration" id="regForm" action="/main.html" onsubmit="submitForm(event)">
+                <h1 class="title">Create User</h1>
+                <div class="formInput">
+                    <input type="text" class="form-input" autofocus placeholder="First Name" id="fname">
+                </div>
+                <div class="formInput">
+                    <input type="text" class="form-input" autofocus placeholder="Last Name" id="lname">
+                </div>
+                <div class="formInput">
+                    <input type="text" class="form-input" autofocus placeholder="Email Address" id="email">
+                </div>
+                <div class="formInput">
+                    <input type="password" class="form-input" autofocus placeholder="Password" id="pass">
+                </div>
+                <div class="formInput">
+                    <input class="form-input" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" autofocus placeholder="Date of Birth" id="dob">
+                </div>
+                <div class="formInput">
+                    <input type="text" class="form-input" autofocus placeholder="Gender" list="gendername" id="gender">
+                        <datalist id="gendername">
+                            <option value="Male">
+                            <option value="Female">
+                            <option value="Others">
+                        </datalist>
+                </div>
+                <div class="formInput">
+                    <input type="text" class="form-input" autofocus placeholder="Phone Number" id="phn">
+                </div>
+                <button class="form-button" type="submit" id="btnSubmit">Submit</button>
+                <div class="formText">
+                    <p class="form-text">
+                        <a class="form-link" href="home.html" id="linkHome">Return to home page</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+
+        <script src="./backend/app.js"></script>
+        
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Login User</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <form class="registration" id="regForm" action="http://localhost:5000/loginUser" method="post">
+                <h1 class="title">Login User</h1>
+                <div class="formInput">
+                    <input type="text" class="form-input" autofocus placeholder="Email Address" name="email" id="email">
+                </div>
+                <div class="formInput">
+                    <input type="password" class="form-input" autofocus placeholder="Password" id="pass" name="pass">
+                </div>
+                <button class="form-button" type="submit" id="btnSubmit">Submit</button>
+                <div class="formText">
+                    <p class="form-text">
+                        <a class="form-link" href="home.html" id="linkHome">Return to home page</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+
+        <script src="./backend/app.js"></script>
+        
+    </body>
+</html>
