@@ -1,10 +1,10 @@
 # Hybrid-Encryption(AES+DES)
-###Requirements
+### Requirements
 ```
 1. Install Visual Studio Code
 2. Install Node.js
 ```
-###Instructions to run code
+### Instructions to run code
 ```
 1. Open Hybrid-Encryption folder in a suitable editor(preferably VS Code)
 2. Open a new terminal in VS Code 
