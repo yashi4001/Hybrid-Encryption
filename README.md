@@ -1,8 +1,8 @@
 # Hybrid-Encryption(AES+DES)
 ### Requirements
 ```
-1. Install Visual Studio Code
-2. Install Node.js
+1. Install Visual Studio Code - https://code.visualstudio.com/download
+2. Install Node.js - https://nodejs.org/en/download/
 ```
 ### Instructions to run code
 ```
