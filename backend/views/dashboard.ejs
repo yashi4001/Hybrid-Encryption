@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Welcome <%=email%></title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <h1 class="title">Welcome <%=email%></h1>
+            <div class = "formInput"> 
+                <button onclick="location.href='http://localhost:5000/getUser?email=<%=email%>'" type="button" class="form-button">View Details</button>
+            </div>
+            <div class = "formInput"> 
+                <button onclick="location.href='http://localhost:5000/createPassword'" type="button" class="form-button">Create Passwords</button>
+            </div>
+            <div class = "formInput"> 
+                <button onclick="location.href='http://localhost:5000/showPass?email=<%=email%>'" type="button" class="form-button">View Passwords</button>
+            </div>
+        </div>
+    </body>
+</html>

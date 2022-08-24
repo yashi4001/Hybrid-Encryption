@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Passphrase</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <%if(!message){ %>
+                <form class="registration" id="regForm" action="http://localhost:5000/createToken" method="post">
+                    <h1 class="title">Create Passphrase</h1>
+                    <div class="formInput">
+                        <input type="text" class="form-input" autofocus placeholder="Email Address" name="user">
+                    </div>
+                    <div class="formInput">
+                        <input type="text" class="form-input" autofocus placeholder="Passphrase for viewing passwords" name="pass">
+                    </div>
+                    <button class="form-button" type="submit" id="btnSubmit">Submit</button>
+                </form>
+            <%} else{ %>
+                <form class="registration" id="regForm" action="http://localhost:5000/verifyToken" method="post">
+                    <h1 class="title">Verify Passphrase</h1>
+                    <div class="formInput">
+                        <input type="text" class="form-input" autofocus placeholder="Email Address" name="user">
+                    </div>
+                    <div class="formInput">
+                        <input type="text" class="form-input" autofocus placeholder="Passphrase for viewing passwords" name="pass">
+                    </div>
+                    <button class="form-button" type="submit" id="btnSubmit">Submit</button>
+                </form>
+            <%}%>
+            
+        </div>
+    </body>
+</html>

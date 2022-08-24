@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>View Details</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        
+        <div class="container">
+            <form class="registration" id="regForm" onsubmit="return submitForm(e);">
+                <h1 class="title">View Details</h1>
+                <div class="formInput">
+                    <span class="form-input"><b>Name:</b> <%= result.T_name %></span>
+                </div>
+                <div class="formInput">
+                    <span class="form-input"><b>Email:</b> <%= result.T_email %></span>    
+                </div>
+                <div class="formInput">
+                    <span class="form-input"><b>DOB:</b> <%= result.T_dob %></span>    
+                </div>
+                <div class="formInput">
+                    <span class="form-input"><b>Gender:</b> <%= result.T_gender %></span>    
+                </div>
+                <div class="formInput">
+                        <span class="form-input"><b>Phone No: </b><%= result.T_phone %></span>
+                    <datalist id="gendername">
+                            <option value="Male">
+                            <option value="Female">
+                            <option value="Others">
+                        </datalist>
+                </div>
+            </form>
+        </div>
+        </div>
+    </body>
+</html>
