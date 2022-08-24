@@ -6,7 +6,7 @@
 ```
 ### Instructions to run code
 ```
-1. Open Hybrid-Encryption folder in a suitable editor(preferably VS Code)
+1. Open Hybrid-Encryption-main folder in a suitable editor(preferably VS Code)
 2. Open a new terminal in VS Code 
 3. Type the following commands -
   3.1 cd backend
