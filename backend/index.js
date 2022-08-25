@@ -54,8 +54,6 @@ app.get("/getuser",async(req,res)=>{
 })
 
 app.post("/adduser",(req,res)=>{
-    
-    console.log(req.body);
     const encuser = {
         T_name: crypto.DES.encrypt(req.body.T_name, 'cyber-sec-231-21').toString(),
         T_email: crypto.DES.encrypt(req.body.T_email, 'cyber-sec-231-21').toString(),
@@ -75,7 +73,11 @@ app.post("/adduser",(req,res)=>{
     const newuser = new User(aesEnc);
     const sampleUser=new Sample(req.body);
     sampleUser.save();
-    newuser.save();
+    newuser.save((err,response)=>{
+        if(err) res.render("message",{"message":"Error!"});
+        else res.render("message",{"message":"User Registered!"});
+    });
+    
 })
 
 app.get('/edit/:id',(req,res)=>{
@@ -127,6 +129,7 @@ app.post('/createToken',async(req,res)=>{
     const passphrase=req.body.pass;
     const user=req.body.user;
     const token = jwt.sign({ user: user }, passphrase);
+    console.log('JWT Token created: '+token);
     const newToken=new Token({user:user,pass_token:token});
     newToken.save();
     res.render("message",{"message":"Token Created!"});
@@ -138,7 +141,6 @@ app.post('/verifyToken',async(req,res)=>{
 
     try{
         const verifyEmail=jwt.verify(token,req.body.pass).user;
-        console.log(jwt.verify(token,req.body.pass));
         if(verifyEmail==req.body.user) {
             const passwords=await Password.find({user:req.body.user});
             let details=[];

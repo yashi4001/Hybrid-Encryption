@@ -4,7 +4,7 @@ require("dotenv").config();
 const mongo = async() => {
     try{
         //Database connection
-       const MONGOURI = 'mongodb+srv://user123:gb6fE3jpZfcd1Tp6@cluster0.wseudw7.mongodb.net/?retryWrites=true&w=majority';
+       const MONGOURI = 'mongodb+srv://user1234:Vk1KG4aJFNBeDdWo@cluster0.izm5ovr.mongodb.net/?retryWrites=true&w=majority';
         await mongoose.connect(MONGOURI, {
             useUnifiedTopology: true,
             useNewUrlParser: true,
